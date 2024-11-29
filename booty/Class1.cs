@@ -4,6 +4,6 @@ public class Kata
 {
     public static bool CheckCourse(string[] strings)
     {
-        return true;
+        return !strings.Contains("N");
     }
 }

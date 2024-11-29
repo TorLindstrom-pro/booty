@@ -10,4 +10,11 @@ public class CheckCourseTests
         bool courseIsClear = Kata.CheckCourse(new [] { "X", "0" });
         Assert.True(courseIsClear);
     }
+    
+    [Fact(DisplayName = "If there is a navalfleet in the way, return false")]
+    public void CheckCourse_NavalFleetInTheWay_ShouldReturnFalse()
+    {
+        bool courseIsClear = Kata.CheckCourse(new [] { "X", "N" });
+        Assert.False(courseIsClear);
+    }
 }
