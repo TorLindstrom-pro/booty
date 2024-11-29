@@ -2,10 +2,10 @@
 
 namespace Test;
 
-public class UnitTest1
+public class CheckCourseTests
 {
-    [Fact]
-    public void Test1()
+    [Fact(DisplayName = "If there is no navalfleet in the way, return true")]
+    public void CheckCourse_NoNavalFleetInTheWay_ShouldReturnTrue()
     {
         bool courseIsClear = Kata.CheckCourse(new [] { "X", "0" });
         Assert.True(courseIsClear);
