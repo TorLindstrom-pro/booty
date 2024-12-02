@@ -21,7 +21,7 @@ Sjöflottan
 1. ~~har en kolumn~~
     1.
 2. ~~har en start riktning~~
-2. den ska röra sig varje runda (upp eller ner)
+2. ~~den ska röra sig varje runda (upp eller ner)~~
 3. den ska vända vid kanten
 
 Piratskeppet

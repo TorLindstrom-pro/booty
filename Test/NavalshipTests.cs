@@ -43,4 +43,20 @@ public class NavalshipTests
 		// Assert
 		subject.Direction.Should().Be(Direction.Down);
 	}
+	
+	[Fact(DisplayName = "Navalship should be able to move, increasing its position")]
+	public void Navalship_ShouldBeAbletoMove()
+	{
+		// Arrange
+		var subject = new Navalship
+		{
+			Position = 0
+		};
+		
+		//Act
+		subject.Move();
+
+		// Assert
+		subject.Position.Should().Be(1);
+	}
 }
