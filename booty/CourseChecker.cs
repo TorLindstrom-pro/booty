@@ -1,6 +1,6 @@
 ﻿namespace booty;
 
-public class Kata
+public class CourseChecker
 {
     public static bool CheckCourse(string[] strings)
     {
