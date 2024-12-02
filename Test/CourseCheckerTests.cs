@@ -1,4 +1,5 @@
 ﻿using booty;
+using FluentAssertions;
 
 namespace Test;
 
@@ -11,7 +12,7 @@ public class CourseCheckerTests
         var courseIsClear = CourseChecker.CheckCourse(new string[][] {["X", "0"]});
         
         // Assert
-        Assert.True(courseIsClear);
+        courseIsClear.Should().BeTrue();
     }
     
     [Fact(DisplayName = "If there is a navalship in the way, return false")]
@@ -21,6 +22,6 @@ public class CourseCheckerTests
         var courseIsClear = CourseChecker.CheckCourse(new string[][] {["X", "N"]});
         
         // Assert
-        Assert.False(courseIsClear);
+        courseIsClear.Should().BeFalse();
     }
 }
