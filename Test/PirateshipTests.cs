@@ -17,4 +17,14 @@ public class PirateshipTests
         // assert
         pirateShip.Row.Should().Be(1);
     }
+
+    [Fact(DisplayName = "PirateShip should have a position from start")]
+    public void PirateShip_ShouldHaveAPositionFromStart()
+    {
+        // act
+        var pirateShip = new Pirateship();
+
+        // assert
+        pirateShip.Position.Should().Be(0);
+    }
 }
