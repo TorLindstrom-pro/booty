@@ -25,9 +25,9 @@ Sjöflottan
 3. den ska vända vid kanten
 
 Piratskeppet
-1. har en rad
-2. har position
-2. ska röra sig varje runda
+1. ~~har en rad~~
+2. ~~har position~~
+2. ~~ska röra sig varje runda~~
 3. när den kommit till högra kanten är den säker
 
 Kurs

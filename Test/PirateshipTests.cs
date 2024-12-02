@@ -27,4 +27,17 @@ public class PirateshipTests
         // assert
         pirateShip.Position.Should().Be(0);
     }
+
+    [Fact(DisplayName = "PirateShip should be able to move, increasing it's position")]
+    public void PirateShip_ShouldBeAbleToMove()
+    {
+        // arrange
+        var pirateShip = new Pirateship();
+
+        // act
+        pirateShip.Move();
+        
+        // assert
+        pirateShip.Position.Should().Be(1);
+    }
 }
