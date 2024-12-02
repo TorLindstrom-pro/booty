@@ -18,6 +18,19 @@ public class NavalshipTests
 		subject.Column.Should().Be(1);
 	}
 
+	[Fact(DisplayName = "Navalship should have a position")]
+	public void Navalship_ShouldHaveAPosition()
+	{
+		// Act
+		var subject = new Navalship
+		{
+			Position = 1
+		};
+
+		// Assert
+		subject.Position.Should().Be(1);
+	}
+
 	[Fact(DisplayName = "Navalship should have a direction")]
 	public void Navalship_ShouldHaveADirection()
 	{
