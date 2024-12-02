@@ -17,4 +17,17 @@ public class NavalshipTests
 		// Assert
 		subject.Column.Should().Be(1);
 	}
+
+	[Fact(DisplayName = "Navalship should have a direction")]
+	public async Task Navalship_ShouldHaveADirection()
+	{
+		// Act
+		var subject = new Navalship
+		{
+			Direction = 1
+		};
+
+		// Assert
+		subject.Direction.Should().Be(1);
+	}
 }
