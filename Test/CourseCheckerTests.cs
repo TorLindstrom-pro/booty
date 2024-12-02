@@ -8,7 +8,7 @@ public class CourseCheckerTests
     public void CheckCourse_NoNavalFleetInTheWay_ShouldReturnTrue()
     {
         // Act
-        bool courseIsClear = CourseChecker.CheckCourse(["X", "0"]);
+        var courseIsClear = CourseChecker.CheckCourse(["X", "0"]);
         
         // Assert
         Assert.True(courseIsClear);
@@ -18,7 +18,7 @@ public class CourseCheckerTests
     public void CheckCourse_NavalFleetInTheWay_ShouldReturnFalse()
     {
         // Act
-        bool courseIsClear = CourseChecker.CheckCourse(["X", "N"]);
+        var courseIsClear = CourseChecker.CheckCourse(["X", "N"]);
         
         // Assert
         Assert.False(courseIsClear);
