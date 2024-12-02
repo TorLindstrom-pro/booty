@@ -6,7 +6,7 @@ namespace Test;
 public class NavalshipTests
 {
 	[Fact(DisplayName = "Navalship should have a column")]
-	public async Task Navalship_ShouldHaveAColumn()
+	public void Navalship_ShouldHaveAColumn()
 	{
 		// Act
 		var subject = new Navalship
@@ -19,7 +19,7 @@ public class NavalshipTests
 	}
 
 	[Fact(DisplayName = "Navalship should have a direction")]
-	public async Task Navalship_ShouldHaveADirection()
+	public void Navalship_ShouldHaveADirection()
 	{
 		// Act
 		var subject = new Navalship
