@@ -24,10 +24,10 @@ public class NavalshipTests
 		// Act
 		var subject = new Navalship
 		{
-			Direction = 1
+			Direction = Direction.Down
 		};
 
 		// Assert
-		subject.Direction.Should().Be(1);
+		subject.Direction.Should().Be(Direction.Down);
 	}
 }
