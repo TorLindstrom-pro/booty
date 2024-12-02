@@ -8,7 +8,7 @@ public class CourseCheckerTests
     public void CheckCourse_NoNavalshipInTheWay_ShouldReturnTrue()
     {
         // Act
-        var courseIsClear = CourseChecker.CheckCourse(["X", "0"]);
+        var courseIsClear = CourseChecker.CheckCourse(new string[][] {["X", "0"]});
         
         // Assert
         Assert.True(courseIsClear);
@@ -18,7 +18,7 @@ public class CourseCheckerTests
     public void CheckCourse_NavalshipInTheWay_ShouldReturnFalse()
     {
         // Act
-        var courseIsClear = CourseChecker.CheckCourse(["X", "N"]);
+        var courseIsClear = CourseChecker.CheckCourse(new string[][] {["X", "N"]});
         
         // Assert
         Assert.False(courseIsClear);

@@ -2,8 +2,8 @@
 
 public class CourseChecker
 {
-    public static bool CheckCourse(string[] strings)
+    public static bool CheckCourse(string[][] strings)
     {
-        return !strings.Contains("N");
+        return !strings.SelectMany(tile => tile).Contains("N");
     }
 }
