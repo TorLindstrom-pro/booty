@@ -4,8 +4,8 @@ namespace Test;
 
 public class CourseCheckerTests
 {
-    [Fact(DisplayName = "If there is no navalfleet in the way, return true")]
-    public void CheckCourse_NoNavalFleetInTheWay_ShouldReturnTrue()
+    [Fact(DisplayName = "If there is no navalship in the way, return true")]
+    public void CheckCourse_NoNavalshipInTheWay_ShouldReturnTrue()
     {
         // Act
         var courseIsClear = CourseChecker.CheckCourse(["X", "0"]);
@@ -14,8 +14,8 @@ public class CourseCheckerTests
         Assert.True(courseIsClear);
     }
     
-    [Fact(DisplayName = "If there is a navalfleet in the way, return false")]
-    public void CheckCourse_NavalFleetInTheWay_ShouldReturnFalse()
+    [Fact(DisplayName = "If there is a navalship in the way, return false")]
+    public void CheckCourse_NavalshipInTheWay_ShouldReturnFalse()
     {
         // Act
         var courseIsClear = CourseChecker.CheckCourse(["X", "N"]);
