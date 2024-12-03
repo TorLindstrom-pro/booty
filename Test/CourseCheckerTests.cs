@@ -24,4 +24,21 @@ public class CourseCheckerTests
         // Assert
         courseIsClear.Should().BeFalse();
     }
+
+    [Fact(DisplayName = "If there is a navalship within cannon reach from start return false")]
+    public void CheckCourse_NavalshipStartsWithinReach_ShouldReturnFalse()
+    {
+        // Arrange
+        var map = new string[][]
+        {
+            ["X", "0", "0"], 
+            ["N", "0", "0"] 
+        };
+        
+        // Act
+        var result = CourseChecker.CheckCourse(map);
+        
+        // Assert
+        result.Should().BeFalse();
+    }
 }
