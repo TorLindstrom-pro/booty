@@ -19,29 +19,34 @@ kolla om fångad
 
 Sjöflottan
 1. ~~har en kolumn~~
-    1.
 2. ~~har en start riktning~~
-2. ~~den ska röra sig varje runda (upp eller ner)~~
-3. den ska vända vid kanten
+3. ~~den ska röra sig varje runda (upp eller ner)~~
+4. den ska vända vid kanten
 
 Piratskeppet
 1. ~~har en rad~~
 2. ~~har position~~
-2. ~~ska röra sig varje runda~~
-3. när den kommit till högra kanten är den säker
+3. ~~ska röra sig varje runda~~
+4. när den kommit till högra kanten är den säker
 
 Kurs
-1. ~~X000 -> true -> kan returnera true~~
-2. ~~X0N0 -> false -> sjöflotta i vägen~~
-3. X00N -> true -> sjöflotta finns men är inte i vägen
+1. ~~X000 -> true -> kan returnera true~~ 
+   * (hade kunnat skapa skeppsobjekten redan här)
+   * instans metod för checkcourse, property för skeppen, asserta på propertyn?
+2. ~~X0N0 -> false -> sjöflotta i vägen~~ 
+   * (hade kunnat komma efter räckhålls-checken, och implementerat move loop)
+3. X000 -> false -> sjöflotta är inom räckhåll
+   0N00
+   * (skapa skepp objekt och check för räckhåll, men inte loopen ännu)
+4. X00N -> true -> sjöflotta finns men är inte i vägen
    0000
    0000
    0000
-4. X000 -> dem kommer att krocka
+5. X000 -> dem kommer att krocka
    0000
    0000
    000N
-5. x börjar på annat än topprad
+6. x börjar på annat än topprad
 
 Karta ->
 Läser av position av skeppen -> skapa sjöflottor och piratskeppet
