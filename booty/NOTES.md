@@ -19,13 +19,14 @@ kolla om fångad
 
 Sjöflottan
 1. ~~har en kolumn~~
-2. ~~har en start riktning~~
-3. ~~den ska röra sig varje runda (upp eller ner)~~
-4. den ska vända vid kanten
+2. ~~har en position~~
+3. ~~har en start riktning~~
+4. ~~den ska röra sig varje runda (upp eller ner)~~
+5. den ska vända vid kanten
 
 Piratskeppet
 1. ~~har en rad~~
-2. ~~har position~~
+2. ~~har en position~~
 3. ~~ska röra sig varje runda~~
 4. när den kommit till högra kanten är den säker
 

@@ -18,17 +18,17 @@ public class PirateshipTests
         pirateShip.Row.Should().Be(1);
     }
 
-    [Fact(DisplayName = "PirateShip should have a position from start")]
-    public void PirateShip_ShouldHaveAPositionFromStart()
+    [Fact(DisplayName = "PirateShip should have a column from start")]
+    public void PirateShip_ShouldHaveAColumnFromStart()
     {
         // act
         var pirateShip = new Pirateship();
 
         // assert
-        pirateShip.Position.Should().Be(0);
+        pirateShip.Column.Should().Be(0);
     }
 
-    [Fact(DisplayName = "PirateShip should be able to move, increasing it's position")]
+    [Fact(DisplayName = "PirateShip should be able to move, increasing it's column")]
     public void PirateShip_ShouldBeAbleToMove()
     {
         // arrange
@@ -38,6 +38,6 @@ public class PirateshipTests
         pirateShip.Move();
         
         // assert
-        pirateShip.Position.Should().Be(1);
+        pirateShip.Column.Should().Be(1);
     }
 }

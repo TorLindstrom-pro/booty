@@ -21,7 +21,7 @@ public class CourseChecker
         
         static bool WithinCannonReach(Pirateship pirateship, Navalship navalship)
         {
-            var columnWithinReach = navalship.Column >= pirateship.Position - 1 && navalship.Column <= pirateship.Position + 1;
+            var columnWithinReach = navalship.Column >= pirateship.Column - 1 && navalship.Column <= pirateship.Column + 1;
             var rowWithinReach = navalship.Position >= pirateship.Row - 1 && navalship.Position <= pirateship.Row + 1;
             
             return columnWithinReach && rowWithinReach;
