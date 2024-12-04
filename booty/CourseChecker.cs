@@ -10,14 +10,26 @@ public class CourseChecker
 
         var navalships = tiles
             .Where(tile => tile.tile == "N")
-            .Select(tile => new Navalship { Column = tile.columnIndex});
+            .Select(tile => new Navalship { Column = tile.columnIndex})
+            .ToList();
 
         var pirateship = tiles
             .Where(tile => tile.tile == "X")
             .Select(tile => new Pirateship { Row = tile.rowIndex })
             .Single();
 
-        return !navalships.Any(navalship => WithinCannonReach(pirateship, navalship));
+        while (pirateship.Column < tiles.Count)
+        {
+            pirateship.Move();
+            navalships.ForEach(navalship => navalship.Move());
+            
+            if (navalships.Any(navalship => WithinCannonReach(pirateship, navalship)))
+            {
+                return false;
+            }
+        }
+
+        return true;
         
         static bool WithinCannonReach(Pirateship pirateship, Navalship navalship)
         {
