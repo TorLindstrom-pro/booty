@@ -15,7 +15,7 @@ public class CourseChecker
         var pirateship = tiles
             .Where(tile => tile.tile == "X")
             .Select(tile => new Pirateship { Row = tile.rowIndex })
-            .First();
+            .Single();
 
         return !navalships.Any(navalship => WithinCannonReach(pirateship, navalship));
         

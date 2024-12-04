@@ -36,7 +36,7 @@ Kurs
    * instans metod för checkcourse, property för skeppen, asserta på propertyn?
 2. ~~X0N0 -> false -> sjöflotta i vägen~~ 
    * (hade kunnat komma efter räckhålls-checken, och implementerat move loop)
-3. X000 -> false -> sjöflotta är inom räckhåll
+3. ~~X000 -> false -> sjöflotta är inom räckhåll~~
    0N00
    * (skapa skepp objekt och check för räckhåll, men inte loopen ännu)
 4. X00N -> true -> sjöflotta finns men är inte i vägen
