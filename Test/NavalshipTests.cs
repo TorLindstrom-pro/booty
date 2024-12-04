@@ -50,7 +50,8 @@ public class NavalshipTests
 		// Arrange
 		var subject = new Navalship
 		{
-			Position = 0
+			Position = 0,
+			RowCount = 4
 		};
 		
 		//Act
@@ -58,5 +59,22 @@ public class NavalshipTests
 
 		// Assert
 		subject.Position.Should().Be(1);
+	}
+
+	[Fact(DisplayName = "Navalship should move upwards if starting in the bottom")]
+	public void Navalship_StartingOnTheBottomRow_ShouldMoveUpwards()
+	{
+		// Arrange
+		var subject = new Navalship
+		{
+			Position = 4,
+			RowCount = 4
+		};
+		
+		//Act
+		subject.Move();
+
+		// Assert
+		subject.Position.Should().Be(3);
 	}
 }
