@@ -9,11 +9,19 @@ public class Navalship
 
 	public void Move()
 	{
-		if (Position == IndexOfBottomRow) Direction = Direction.Up;
-		else if (Position == 0) Direction = Direction.Down;
+		EvaluateDirection();
 
 		if (Direction == Direction.Up) Position--;
+		
 		else Position++;
+		
+		return;
+
+		void EvaluateDirection()
+		{
+			if (Position == IndexOfBottomRow) Direction = Direction.Up;
+			else if (Position == 0) Direction = Direction.Down;
+		}
 	}
 }
 
