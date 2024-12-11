@@ -15,6 +15,7 @@ public class CourseChecker
             .Select(tile => new Navalship
             {
                 Column = tile.columnIndex, 
+                Position = tile.rowIndex,
                 RowCount = indexOfBottomRow
             })
             .ToList();

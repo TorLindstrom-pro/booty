@@ -76,4 +76,23 @@ public class CourseCheckerTests
         // Assert
         result.Should().BeFalse();
     }
+
+    [Fact(DisplayName = "If there is a navalship starting in the bottom that catches the pirates return false")]
+    public void CheckCourse_NavalshipWillCatchThePiratesAfterStartingOnTheBottom_ShouldReturnFalse()
+    {
+        // Arrange
+        var map = new string[][]
+        {
+            ["X", "0", "0", "0", "0"], 
+            ["0", "0", "0", "0", "0"], 
+            ["0", "0", "0", "0", "0"], 
+            ["0", "0", "0", "N", "0"] 
+        };
+        
+        // Act
+        var result = CourseChecker.CheckCourse(map);
+        
+        // Assert
+        result.Should().BeFalse();
+    }
 }
