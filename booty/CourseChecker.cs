@@ -21,7 +21,7 @@ public class CourseChecker
             .Select(tile => new Pirateship { Row = tile.RowIndex })
             .Single();
 
-        while (pirateship.Column < tiles.Count)
+        while (!PirateShipHasReachedSafety())
         {
             pirateship.Move();
             navalships.ForEach(navalship => navalship.Move());
@@ -33,7 +33,12 @@ public class CourseChecker
         }
 
         return true;
-        
+
+        bool PirateShipHasReachedSafety()
+        {
+            return pirateship.Column >= tiles.Count;
+        }
+
         static bool WithinCannonReach(Pirateship pirateship, Navalship navalship)
         {
             var columnWithinReach = navalship.Column >= pirateship.Column - 1 && navalship.Column <= pirateship.Column + 1;
