@@ -5,7 +5,7 @@ public class Navalship
 	public int Column { get; set; }
 	public int Position { get; set; }
 	public Direction Direction { get; set; }
-	public int IndexOfBottomRow { get; set; }
+	public int IndexOfBottomRow { get; init; }
 
 	public void Move()
 	{
