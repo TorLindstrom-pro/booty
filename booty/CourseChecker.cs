@@ -36,7 +36,7 @@ public class CourseChecker
 
         bool PirateShipHasReachedSafety()
         {
-            return pirateship.Column >= tiles.Count;
+            return pirateship.Column >= map[0].Length;
         }
 
         static bool WithinCannonReach(Pirateship pirateship, Navalship navalship)
