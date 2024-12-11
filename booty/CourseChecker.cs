@@ -8,9 +8,15 @@ public class CourseChecker
             .SelectMany((row, rowIndex) => row.Select((tile, columnIndex) => (tile, rowIndex, columnIndex)))
             .ToList();
 
+        var indexOfBottomRow = strings.Length - 1;
+
         var navalships = tiles
             .Where(tile => tile.tile == "N")
-            .Select(tile => new Navalship { Column = tile.columnIndex})
+            .Select(tile => new Navalship
+            {
+                Column = tile.columnIndex, 
+                RowCount = indexOfBottomRow
+            })
             .ToList();
 
         var pirateship = tiles
