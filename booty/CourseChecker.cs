@@ -4,23 +4,21 @@ public class CourseChecker
 {
     public static bool CheckCourse(string[][] strings)
     {
-        var tiles = strings
-            .SelectMany((row, rowIndex) => row.Select((tile, columnIndex) => (tile, rowIndex, columnIndex)))
-            .ToList();
+        var tiles = GetTilesFromMap(strings);
 
         var navalships = tiles
-            .Where(tile => tile.tile == "N")
+            .Where(tile => tile.Tile == "N")
             .Select(tile => new Navalship
             {
-                Column = tile.columnIndex, 
-                Position = tile.rowIndex,
+                Column = tile.ColumnIndex, 
+                Position = tile.RowIndex,
                 IndexOfBottomRow = strings.Length - 1
             })
             .ToList();
 
         var pirateship = tiles
-            .Where(tile => tile.tile == "X")
-            .Select(tile => new Pirateship { Row = tile.rowIndex })
+            .Where(tile => tile.Tile == "X")
+            .Select(tile => new Pirateship { Row = tile.RowIndex })
             .Single();
 
         while (pirateship.Column < tiles.Count)
@@ -44,4 +42,18 @@ public class CourseChecker
             return columnWithinReach && rowWithinReach;
         }
     }
+
+    private static List<MapTile> GetTilesFromMap(string[][] strings)
+    {
+        return strings
+            .SelectMany((row, rowIndex) => row.Select((tile, columnIndex) => new MapTile(tile, rowIndex, columnIndex)))
+            .ToList();
+    }
+}
+
+internal class MapTile(string tile, int rowIndex, int columnIndex)
+{
+    public string Tile { get; } = tile;
+    public int RowIndex { get; } = rowIndex;
+    public int ColumnIndex { get; } = columnIndex;
 }
