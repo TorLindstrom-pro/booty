@@ -95,4 +95,23 @@ public class CourseCheckerTests
         // Assert
         result.Should().BeFalse();
     }
+    
+    [Fact(DisplayName = "If the pirates successfully dodges all navy ships return true")]
+    public void CheckCourse_PiratesDodgesAllNavyShips_ShouldReturnTrue()
+    {
+        // Arrange
+        var map = new string[][]
+        {
+            ["X", "0", "0", "N", "0", "0", "0"], 
+            ["0", "0", "0", "0", "0", "0", "0"], 
+            ["0", "0", "0", "0", "0", "0", "0"], 
+            ["0", "0", "0", "0", "0", "0", "N"] 
+        };
+        
+        // Act
+        var result = CourseChecker.CheckCourse(map);
+        
+        // Assert
+        result.Should().BeTrue();
+    }
 }
