@@ -2,9 +2,9 @@
 
 public class CourseChecker
 {
-    public static bool CheckCourse(string[][] strings)
+    public static bool CheckCourse(string[][] map)
     {
-        var tiles = GetTilesFromMap(strings);
+        var tiles = GetTilesFromMap(map);
 
         var navalships = tiles
             .Where(tile => tile.Tile == "N")
@@ -12,7 +12,7 @@ public class CourseChecker
             {
                 Column = tile.ColumnIndex, 
                 Position = tile.RowIndex,
-                IndexOfBottomRow = strings.Length - 1
+                IndexOfBottomRow = map.Length - 1
             })
             .ToList();
 
