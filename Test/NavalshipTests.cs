@@ -77,4 +77,46 @@ public class NavalshipTests
 		// Assert
 		subject.Position.Should().Be(3);
 	}
+
+	[Fact(DisplayName = "Navalship should move upward after reaching the bottom")]
+	public void Navalship_AfterReachingTheBottom_ShouldMoveUpwards()
+	{
+		// Arrange
+		var subject = new Navalship
+		{
+			Position = 3,
+			RowCount = 4,
+			Direction = Direction.Down
+		};
+		
+		//Act
+		subject.Move();
+		subject.Move();
+		subject.Move();
+
+		// Assert
+		subject.Position.Should().Be(2);
+		subject.Direction.Should().Be(Direction.Up);
+	}
+
+	[Fact(DisplayName = "Navalship should move downward after reaching the top")]
+	public void Navalship_AfterReachingTheTop_ShouldMoveDownward()
+	{
+		// Arrange
+		var subject = new Navalship
+		{
+			Position = 2,
+			RowCount = 4,
+			Direction = Direction.Up
+		};
+		
+		//Act
+		subject.Move();
+		subject.Move();
+		subject.Move();
+
+		// Assert
+		subject.Position.Should().Be(1);
+		subject.Direction.Should().Be(Direction.Down);
+	}
 }
