@@ -51,7 +51,7 @@ public class NavalshipTests
 		var subject = new Navalship
 		{
 			Position = 0,
-			RowCount = 4
+			IndexOfBottomRow = 4
 		};
 		
 		//Act
@@ -68,7 +68,7 @@ public class NavalshipTests
 		var subject = new Navalship
 		{
 			Position = 4,
-			RowCount = 4
+			IndexOfBottomRow = 4
 		};
 		
 		//Act
@@ -85,7 +85,7 @@ public class NavalshipTests
 		var subject = new Navalship
 		{
 			Position = 3,
-			RowCount = 4,
+			IndexOfBottomRow = 4,
 			Direction = Direction.Down
 		};
 		
@@ -106,7 +106,7 @@ public class NavalshipTests
 		var subject = new Navalship
 		{
 			Position = 2,
-			RowCount = 4,
+			IndexOfBottomRow = 4,
 			Direction = Direction.Up
 		};
 		
