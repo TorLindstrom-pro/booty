@@ -2,7 +2,7 @@ namespace booty;
 
 public class Navalship
 {
-	public int Column { get; set; }
+	public int Column { get; init; }
 	public int Position { get; set; }
 	public Direction Direction { get; set; }
 	public int IndexOfBottomRow { get; init; }
